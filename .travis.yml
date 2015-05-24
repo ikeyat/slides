@@ -8,7 +8,7 @@ script:
   - md-slider _sandbox/test_markdown_slider.md > release/index.html
   
 after_script:
-  - ./.travis.sh deploy
+  - sh .travis.sh deploy
 
 env:
   global:

@@ -4,5 +4,5 @@ before_script:
   - gem install markdown_slider
 
 script: 
-  - markdown_slider _sandbox/test_markdown_slider.md > _sandbox/index.html
+  - md-slider _sandbox/test_markdown_slider.md > _sandbox/index.html
   

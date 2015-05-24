@@ -4,7 +4,8 @@ before_script:
   - gem install markdown_slider
 
 script: 
-  - md-slider _sandbox/test_markdown_slider.md > _sandbox/index.html
+  - mkdir release
+  - md-slider _sandbox/test_markdown_slider.md > release/index.html
   
 after_script:
   - ./.travis.sh deploy

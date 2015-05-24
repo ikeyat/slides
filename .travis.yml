@@ -1,4 +1,4 @@
-language: java
+language: ruby
 addons:
 before_script:
   - gem install markdown_slider

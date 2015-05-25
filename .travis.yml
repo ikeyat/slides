@@ -18,7 +18,7 @@ after_success:
    - git checkout -b $BRANCH_NAME
    - cd $GH_DEPLOY_PATH
    - git rm -r $GH_DEPLOY_PATH/*
-   - cp -R $BUILD_DIR/* .
+   - cp -R $BUILD_DIR/* $GH_DEPLOY_PATH
    - git add -A
    - git commit -q -m "Automatically updated by Travis build $TRAVIS_BUILD_NUMBER"
    - git push origin $BRANCH_NAME
@@ -29,7 +29,7 @@ env:
     - BUILD_DIR=$TRAVIS_BUILD_DIR/build
     - WORK_DIR=$TRAVIS_BUILD_DIR/work
     - GH_DEPLOY_REPO=ikeyat/ikeyat.github.io
-    - GH_DEPLOY_PATH=$WORD_DIR/slides
+    - GH_DEPLOY_PATH=$WORK_DIR/slides
     - BRANCH_NAME=travis-latest-snapshot
     - secure: "KSxgEDfpnRqIuD9MQ+LACS8ZhLB9roordtcUWUKTnzmyHy0iKpAWFk+fmEgcvgtVyxd6N0VG0kh6aFvgMS7e+GMGCJA8L5w1Ln7XV52py9TvhiGp7zhOGUiTEi2KId16VMlsK/oVOPT//8kDPV7oSzAiIe/vSvGULaGd6LpPqFPruN+MaBgkbC3MCsOW3Wk1yqzW6cjq9rlpFaIjuM4v8/rM1XhXfLKoFCwtq5oqdnCQtCL5BFSLNP+41yWy6W9KIZ+StqS1C0TqbE1XPi1WyEdfdb2dz3Fm1aiWOswBOgKxArfBO52zdUX1UsMpFRw3QBZyaJaz2JFAfNj9JFYhjaSMD/gZoqzrMbF9kuI0Ml5kwuIAhYkkvlS8BQBtKP9jSXJibsVYVWnBIFY2vLcwg2AvCYmWbCb0cX2l5Yxzt2X+qavIRKpGP2A9lCNnobn2JBrqiebf0zwzHaZlYOioIlKlMgwOyL21PJnuLvpXoqBDcO7rGVj542BehZy3jalRUXsUxrpYIOshpg4m/7AcxQnClXtcdLfq/sJHYmZkmUAJjJaS+vozuU3dUCTxrd+3ceH7T94Cekdwq49ZplRGUeIbvlBbJdfZMQFudI4evzcrluzoJH1ISjYhrBQR3L4sdcxurZIA5tgxrqknkC91TzbeOKIef+nJQ6BES6bo08I="
     - secure: "KXYrD8MdDpTjrNRrfrBj2pKsfGOX5YAP92g5UYkzPF+nfEH2H5FzXcjW1LyfQFYSfTQ1B0HrWmYuGdA06Q0dn5aTHzD3juGYEACcDbNl9YogzjHruLIsXfxJD5qjNLI1JImG8hQNYhwWKygPDxD7gtS4rYXs0nNLdezeI3y7NHWV1cOEaB0Zzc2jaRbmFF05/yvr/9GiFvgAa6LpT+e06Ia/RIAej+SbCwzzNkkEdrNHp0tnCLKYhD2nXVCdmk3oQ0mAaKGd2XlzXk5gtT3uhuPgIuFq71bzeK7AG6kLtEh9IZe2igdOSSunZu7rXfoZWimDvgFZPcoYSs0W+e2VRRXXDUDx/MKY8CjPWUoImXzpLaiME5Hszu+N6baUyjCw7S6FGHRoo1eNqKk4Sr2ubeJJVJz012b4HD69aML9t8r16bb74UYdAPv7djbbJKGbOIWJr/fQYCgtXlf8vnLnKoUrUJo0cZBxNf0034gVeuAJpF1604sxl0nNkn7tuTHQULFWnZ7SHTCGjsUXxgzbzCRFbcTtaqOF9E+M/Ik/uNQXdncfH460977GAH+n9JsSYW7lw+k/9H6oahLWXOYKmzpWCXaf4QZdqLuWOONkTrtmTfHLzUEb/JcGYSERY+yaipajVhkrSad3P6nzZH64nc0M9U5trA8X8tEfvQFdk/U="

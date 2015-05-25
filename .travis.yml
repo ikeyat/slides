@@ -25,6 +25,7 @@ after_success:
    - rm -Rf $WORK_DIR
    - git clone --quiet "https://github.com/$GH_DEPLOY_REPO.git" $WORK_DIR
    - cd $WORK_DIR
+   - git branch -d $BRANCH_NAME
    - git checkout -b $BRANCH_NAME
    - cd $GH_DEPLOY_PATH
    - git rm -r $GH_DEPLOY_PATH/*

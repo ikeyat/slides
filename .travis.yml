@@ -7,7 +7,7 @@ script: |
     find $TRAVIS_BUILD_DIR -maxdepth 1 -type d | while read DIR
     do
       TARGET_DIR=`basename $DIR`
-      if [ $TARGET_DIR != `basename $TRAVIS_BUILD_DIR` ]
+      if [ $TARGET_DIR != `basename $TRAVIS_BUILD_DIR` ] && [ $TARGET_DIR != `basename $BUILD_DIR` ]
       then
         mkdir $BUILD_DIR/$TARGET_DIR
         md-slider $TRAVIS_BUILD_DIR/$TARGET_DIR/*.md > $BUILD_DIR/$TARGET_DIR/index.html

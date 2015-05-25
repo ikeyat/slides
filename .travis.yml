@@ -4,8 +4,16 @@ before_script:
   - gem install markdown_slider
   - mkdir $BUILD_DIR
 script: 
-  - md-slider _sandbox/test_markdown_slider.md > $BUILD_DIR/index.html
-  
+  - for dir in `find ./ -type d`
+  - do
+  -   TARGET_DIR=`basename $dir`
+  -   if [ $TARGET_DIR != `basename ./` ]
+  -   then
+  -     mkdir $BUILD_DIR/$TARGET_DIR
+  -     md-slider $BUILD_DIR/$TARGET_DIR/*.md > $BUILD_DIR/$TARGET_DIR/index.html
+  -  fi
+  - done
+
 after_success:
    - set +x
    - echo "machine github.com" >> ~/.netrc

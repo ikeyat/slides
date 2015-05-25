@@ -49,6 +49,9 @@ Batch
         - 30 developers
     - ホストとの統合のため、商用ツールと連携する必要があった。
     - 商用ツールに合わせスケジューラやランチャーをカスタマイズした。
+    
+### Spring Batch for Large Enterprises Operations (Ignasi Gonzalez)
+
 - 事例２：電力系
     - プロフィール
         - 4 providers向け

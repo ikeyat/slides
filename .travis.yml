@@ -44,7 +44,7 @@ env:
     - INDEX_FILE=index.html
     - BUILD_DIR=$TRAVIS_BUILD_DIR/build
     - WORK_DIR=$TRAVIS_BUILD_DIR/work
-    - GH_DEPLOY_REPO=ikeyat/ikeyat.github.io
+    - GH_DEPLOY_REPO=ikeyat/slides-publish
     - GH_DEPLOY_PATH=$WORK_DIR/slides
     - BRANCH_NAME=gh-pages
     - secure: "KSxgEDfpnRqIuD9MQ+LACS8ZhLB9roordtcUWUKTnzmyHy0iKpAWFk+fmEgcvgtVyxd6N0VG0kh6aFvgMS7e+GMGCJA8L5w1Ln7XV52py9TvhiGp7zhOGUiTEi2KId16VMlsK/oVOPT//8kDPV7oSzAiIe/vSvGULaGd6LpPqFPruN+MaBgkbC3MCsOW3Wk1yqzW6cjq9rlpFaIjuM4v8/rM1XhXfLKoFCwtq5oqdnCQtCL5BFSLNP+41yWy6W9KIZ+StqS1C0TqbE1XPi1WyEdfdb2dz3Fm1aiWOswBOgKxArfBO52zdUX1UsMpFRw3QBZyaJaz2JFAfNj9JFYhjaSMD/gZoqzrMbF9kuI0Ml5kwuIAhYkkvlS8BQBtKP9jSXJibsVYVWnBIFY2vLcwg2AvCYmWbCb0cX2l5Yxzt2X+qavIRKpGP2A9lCNnobn2JBrqiebf0zwzHaZlYOioIlKlMgwOyL21PJnuLvpXoqBDcO7rGVj542BehZy3jalRUXsUxrpYIOshpg4m/7AcxQnClXtcdLfq/sJHYmZkmUAJjJaS+vozuU3dUCTxrd+3ceH7T94Cekdwq49ZplRGUeIbvlBbJdfZMQFudI4evzcrluzoJH1ISjYhrBQR3L4sdcxurZIA5tgxrqknkC91TzbeOKIef+nJQ6BES6bo08I="

@@ -2,9 +2,8 @@ language: ruby
 addons:
 before_script:
   - gem install markdown_slider
-
-script: 
   - mkdir $BUILD_DIR
+script: 
   - md-slider _sandbox/test_markdown_slider.md > $BUILD_DIR/index.html
   
 after_success:
@@ -18,6 +17,7 @@ after_success:
    - git checkout -b $BRANCH_NAME
    - cd $GH_DEPLOY_PATH
    - git rm -r $GH_DEPLOY_PATH/*
+   - mkdir $GH_DEPLOY_PATH
    - cp -R $BUILD_DIR/* $GH_DEPLOY_PATH/
    - cd $GH_DEPLOY_PATH
    - git add -A

@@ -62,7 +62,7 @@ Batch
         - 300人の開発でいかに品質を確保するか。
     - ポイントに対しPoCを実施した。
         - CheckstyleやSonar等を用いコードの品質確保を確認した。
-        - reportingとschedulingが弱いので拡張が必要だった。
+        - reportingとschedulingが弱いので拡張が必要だった。例えば、既存データの件数から実効時間を予測したり、プログレスをレポートするようにした。
 
 Others
 ---

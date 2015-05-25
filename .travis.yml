@@ -4,6 +4,7 @@ before_script:
   - gem install markdown_slider
   - mkdir $BUILD_DIR
 script: |
+    LINKS_TEXT=""
     find $TRAVIS_BUILD_DIR -maxdepth 1 -type d | while read DIR
     do
       TARGET_DIR=`basename $DIR`
@@ -11,9 +12,10 @@ script: |
       then
         mkdir $BUILD_DIR/$TARGET_DIR
         md-slider $TRAVIS_BUILD_DIR/$TARGET_DIR/*.md > $BUILD_DIR/$TARGET_DIR/index.html
+        LINKS_TEXT="$LINKS_TEXT<li><a href=\"http://ikeyat.github.io/slides/$TARGET_DIR\">$TARGET_DIR</a></li>\n"
       fi
     done
-
+    cat $TRAVIS_BUILD_DIR/$INDEX_FILE | sed "s/#links#/$LINKS_TEXT/g" > $BUILD_DIR/$INDEX_FILE
 after_success:
    - set +x
    - echo "machine github.com" >> ~/.netrc
@@ -31,6 +33,7 @@ after_success:
    - mkdir $GH_DEPLOY_PATH
    - cp -R $BUILD_DIR/* $GH_DEPLOY_PATH/
    - cd $GH_DEPLOY_PATH
+   - cp $BUILD_DIR/$INDEX_FILE $GH_DEPLOY_PATH/$INDEX_FILE
    - git add -A
    - git commit -q -m "Automatically updated by Travis build $TRAVIS_BUILD_NUMBER"
    - git push origin $BRANCH_NAME --force
@@ -38,6 +41,7 @@ after_success:
 
 env:
   global:
+    - INDEX_FILE=index.html
     - BUILD_DIR=$TRAVIS_BUILD_DIR/build
     - WORK_DIR=$TRAVIS_BUILD_DIR/work
     - GH_DEPLOY_REPO=ikeyat/ikeyat.github.io

@@ -22,6 +22,7 @@ after_success:
    - set -x
    - git config --global user.email 'travis@travis-ci.org'
    - git config --global user.name 'travis'
+   - rm -Rf $WORK_DIR
    - git clone --quiet "https://github.com/$GH_DEPLOY_REPO.git" $WORK_DIR
    - cd $WORK_DIR
    - git checkout -b $BRANCH_NAME

@@ -32,13 +32,24 @@ Spring 4.2
 Boot
 ---
 
+### [Spring Boot is made for tooling](http://www.springio.net/spring-boot-is-made-for-tooling/)(Yann Cébron/Stéphane Nicoll)
+
+ - IntelliJ 14のSpring Boot連携機能を実演しながら紹介
+     - オートコンプリート（propertiesも）
+     - JSON生成支援
+ - ついていけなかったがあっという間にアプリが作られていった。
+ - STSを使っている講演者は全体通して少なかった。STSの今後が気になる。
+
 Web
 ---
 
-Batch
----
+### [Modern Java Component Design with Spring 4.2](http://www.springio.net/wp-content/uploads/2014/11/spring-4.2-component-design-juergen-hoeller.pdf) (Juergen Hoeller)
 
-### [Spring 4 Web Apps](http://www.springio.net/wp-content/uploads/2014/11/springio2015-spring-4-web-apps-rossen-stoyanchev.pdf)(Rossen Stoyanchev)
+ - Spring 4.2（ほぼMVC？）をコード例付きで一個ずつ紹介
+ 
+ 
+
+### [Spring 4 Web Apps](http://www.springio.net/wp-content/uploads/2014/11/springio2015-spring-4-web-apps-rossen-stoyanchev.pdf) (Rossen Stoyanchev)
 
 - Spring MVC 4系の新たな機能を淡々と紹介
     - @RestController
@@ -47,7 +58,7 @@ Batch
         - ブラウザキャッシュのため、静的リソースにバージョンハッシュを付けてくれる 
         - Example: “/css/font-awesome.min **-7fbe76cdac**.css”
 
-### [Spring 4 Web Apps](http://www.springio.net/wp-content/uploads/2014/11/springio2015-spring-4-web-apps-rossen-stoyanchev.pdf)(Rossen Stoyanchev)
+### [Spring 4 Web Apps](http://www.springio.net/wp-content/uploads/2014/11/springio2015-spring-4-web-apps-rossen-stoyanchev.pdf) (Rossen Stoyanchev)
 
 - Spring MVC 4系の新たな機能を淡々と紹介
     - WebSocketでは、アプリレベルのSTOMPを使うのが良い
@@ -64,7 +75,7 @@ Batch
     }
     ```
 
-### [Spring 4 Web Apps](http://www.springio.net/wp-content/uploads/2014/11/springio2015-spring-4-web-apps-rossen-stoyanchev.pdf)(Rossen Stoyanchev)
+### [Spring 4 Web Apps](http://www.springio.net/wp-content/uploads/2014/11/springio2015-spring-4-web-apps-rossen-stoyanchev.pdf) (Rossen Stoyanchev)
 
 - Spring MVC 4.2の新機能
     - HTTP Streaming
@@ -79,7 +90,10 @@ Batch
         - JDK1.8のNashornを利用
     - STOMP Client
 
-### Spring Batch for Large Enterprises Operations (Ignasi Gonzalez)
+Batch
+---
+
+### [Spring Batch for Large Enterprises Operations](http://www.springio.net/spring-batch-for-large-enterprises-operations/) (Ignasi Gonzalez)
 
 - 簡単なSpring Batchの紹介とエンタープライズ開発事例紹介
 - 公式サイトのPDFリンクは正しくない・・・
@@ -91,7 +105,7 @@ Batch
     - ホストとの統合のため、商用ツールと連携する必要があった。
     - 商用ツールに合わせスケジューラやランチャーをカスタマイズした。
     
-### Spring Batch for Large Enterprises Operations (Ignasi Gonzalez)
+### [Spring Batch for Large Enterprises Operations](http://www.springio.net/spring-batch-for-large-enterprises-operations/) (Ignasi Gonzalez)
 
 - 事例２：電力系
     - プロフィール

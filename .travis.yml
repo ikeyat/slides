@@ -4,11 +4,9 @@ before_script:
   - gem install markdown_slider
   - mkdir $BUILD_DIR
 script: 
-  - find . -type d | while read DIR
-  - do
+  - find . -type d | while read DIR do
   -   TARGET_DIR=`basename $DIR`
-  -   if [ $TARGET_DIR != `basename ./` ]
-  -   then
+  -   if [ $TARGET_DIR != `basename ./` ] then
   -     mkdir $BUILD_DIR/$TARGET_DIR
   -     md-slider $BUILD_DIR/$TARGET_DIR/*.md > $BUILD_DIR/$TARGET_DIR/index.html
   -  fi

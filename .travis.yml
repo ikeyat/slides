@@ -19,6 +19,7 @@ after_success:
    - cd $GH_DEPLOY_PATH
    - git rm -r $GH_DEPLOY_PATH/*
    - cp -R $BUILD_DIR/* $GH_DEPLOY_PATH
+   - cd $GH_DEPLOY_PATH
    - git add -A
    - git commit -q -m "Automatically updated by Travis build $TRAVIS_BUILD_NUMBER"
    - git push origin $BRANCH_NAME

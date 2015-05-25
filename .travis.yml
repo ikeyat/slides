@@ -12,6 +12,8 @@ after_success:
    - echo "login $GH_LOGIN"    >> ~/.netrc
    - echo "password $GH_TOKEN" >> ~/.netrc
    - set -x
+   - git config --global user.email 'travis@travis-ci.org'
+   - git config --global user.name 'travis'
    - git clone --quiet "https://github.com/$GH_DEPLOY_REPO.git" $WORK_DIR
    - cd $WORK_DIR
    - git checkout -b $BRANCH_NAME

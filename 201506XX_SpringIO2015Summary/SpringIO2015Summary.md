@@ -15,8 +15,7 @@ Spring I/O 2015報告
 * Others
 * 総評
 
-自己紹介
----
+### 自己紹介
 
 * BASIC→VB→VC++→Java
 * フレームワークに興味を持ち、なぜかSIerに入社@2010
@@ -25,14 +24,11 @@ Spring I/O 2015報告
     * Java Based Configurationはまだ無かった。
 * Spring Core/MVC/Batch/Data
 
-概要
----
-
 ### 概要
 
 * 2015/4/29-30@バルセロナ
 * 基調講演＋39セッション＋6ワークショップ
-* 41プレゼンター（槙さん含）
+* 41プレゼンター（日本からは槙さん）
 * Spring/Groovy/Grails
     * G2Xな皆様ごめんなさい
 
@@ -43,18 +39,20 @@ Spring I/O 2015報告
 * 何といってもサグラダファミリアは必見
 * **来年のI/Oもバルセロナで開催するらしい**
 
-```
-TODO: 写真（サグラダファミリア）
-```
+![サグラダファミリア](https://github.com/ikeyat/slides/blob/master/201506XX_SpringIO2015Summary/img/familia1.JPG)
+![サグラダファミリア](https://github.com/ikeyat/slides/blob/master/201506XX_SpringIO2015Summary/img/familia2.JPG)
 
 ### 会場
 
 * AXA Auditorium
 * 中心街から少し外れた場所なので、食事や観光に若干不便。
 
-```
-TODO: 写真（シアター、ノベルティ）
-```
+![会場](https://github.com/ikeyat/slides/blob/master/201506XX_SpringIO2015Summary/img/theater.jpg)
+![会場](https://github.com/ikeyat/slides/blob/master/201506XX_SpringIO2015Summary/img/theater2.jpg)
+
+### 戦利品
+
+![ノベルティ](https://github.com/ikeyat/slides/blob/master/201506XX_SpringIO2015Summary/img/novelty.jpg)
 
 Key Note 「Springの歴史」
 ---

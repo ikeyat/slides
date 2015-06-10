@@ -12,6 +12,7 @@ script: |
       then
         mkdir $BUILD_DIR/$TARGET_DIR
         md-slider $TRAVIS_BUILD_DIR/$TARGET_DIR/*.md > $BUILD_DIR/$TARGET_DIR/index.html
+        cp -r $TRAVIS_BUILD_DIR/$TARGET_DIR/* $BUILD_DIR/$TARGET_DIR/
         export LINKS_TEXT="$LINKS_TEXT<li><a href=\"http://ikeyat.github.io/slides/$TARGET_DIR\">$TARGET_DIR</a></li>"
       fi
     done

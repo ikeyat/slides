@@ -13,10 +13,10 @@ script: |
         mkdir $BUILD_DIR/$TARGET_DIR
         md-slider $TRAVIS_BUILD_DIR/$TARGET_DIR/*.md > $BUILD_DIR/$TARGET_DIR/index.html
         cp -r $TRAVIS_BUILD_DIR/$TARGET_DIR/* $BUILD_DIR/$TARGET_DIR/
-        export LINKS_TEXT="$LINKS_TEXT<li><a href=\"http://ikeyat.github.io/slides/$TARGET_DIR\">$TARGET_DIR</a></li>"
+        export LINKS_TEXT="${LINKS_TEXT}<li><a href=\"http://ikeyat.github.io/slides/$TARGET_DIR\">$TARGET_DIR</a></li>"
       fi
     done
-    cat $TRAVIS_BUILD_DIR/$INDEX_FILE | sed "s|#links#|$LINKS_TEXT|g" > $BUILD_DIR/$INDEX_FILE
+    cat $TRAVIS_BUILD_DIR/$INDEX_FILE | sed -e "s/#links#/${LINKS_TEXT}/g" > $BUILD_DIR/$INDEX_FILE
 after_success:
    - set +x
    - echo "machine github.com" >> ~/.netrc
@@ -34,7 +34,7 @@ after_success:
    - mkdir $GH_DEPLOY_PATH
    - cp -R $BUILD_DIR/* $GH_DEPLOY_PATH/
    - cd $GH_DEPLOY_PATH
-   - cp $TRAVIS_BUILD_DIR/$INDEX_FILE $GH_DEPLOY_PATH/$INDEX_FILE
+   - cp $BUILD_DIR/$INDEX_FILE $GH_DEPLOY_PATH/$INDEX_FILE
    - git add -A
    - git commit -q -m "Automatically updated by Travis build $TRAVIS_BUILD_NUMBER"
    - git push origin $BRANCH_NAME --force

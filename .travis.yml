@@ -34,7 +34,7 @@ after_success:
    - mkdir $GH_DEPLOY_PATH
    - cp -R $BUILD_DIR/* $GH_DEPLOY_PATH/
    - cd $GH_DEPLOY_PATH
-   - cp $BUILD_DIR/$INDEX_FILE $GH_DEPLOY_PATH/$INDEX_FILE
+   - cp $TRAVIS_BUILD_DIR/$INDEX_FILE $GH_DEPLOY_PATH/$INDEX_FILE
    - git add -A
    - git commit -q -m "Automatically updated by Travis build $TRAVIS_BUILD_NUMBER"
    - git push origin $BRANCH_NAME --force

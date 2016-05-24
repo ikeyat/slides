@@ -16,7 +16,7 @@ script: |
         export LINKS_TEXT="${LINKS_TEXT}<li><a href=\"http://ikeyat.github.io/slides/$TARGET_DIR\">$TARGET_DIR</a></li>"
       fi
     done
-    cat $TRAVIS_BUILD_DIR/$INDEX_FILE | sed -e "s/#links#/${LINKS_TEXT}/g" > $BUILD_DIR/$INDEX_FILE
+    cat $TRAVIS_BUILD_DIR/$INDEX_FILE | sed -e "s|#links#|${LINKS_TEXT}|g" > $BUILD_DIR/$INDEX_FILE
 after_success:
    - set +x
    - echo "machine github.com" >> ~/.netrc
